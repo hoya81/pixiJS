@@ -1,0 +1,50 @@
+@mixin m-set-area($width:false, $height:false, $indent:true, $position:relative, $bg:false) {
+	position:$position;
+	display:block;
+	overflow:hidden;
+	margin: 0 auto;
+	width: $minWidth;
+
+	@if $width{
+		width: $width;
+	}
+
+	@if $height{
+		height: $height;
+	}
+
+	@if $indent{
+		text-indent:$indentValue;
+	}
+
+	@if $bg{
+		@include bg($bg:$bg);
+		background-size: cover;
+	}
+}
+
+@mixin m-set-area-bg($width:false, $height:false, $indent:true, $position:relative, $bg:false) {
+	position:$position;
+	display:block;
+	overflow:hidden;
+	margin: 0 auto;
+	width: $minWidth;
+
+	@if $width{
+		width: $width;
+	}
+
+	@if $height{
+		height: $height;
+	}
+
+	@if $indent{
+		text-indent:$indentValue;
+	}
+
+	@if $bg{
+		@include bg($bg:$bg);
+		background-repeat: repeat-x;
+		background-size:auto $height;
+	}
+}

@@ -1,0 +1,36 @@
+@mixin position-abs($top: null, $bottom: null, $left: null, $right: null, $width:null, $height: null, $bp: null) {
+	position: absolute;
+	@if $top != null {
+		top: $top;
+	}
+	@if $bottom != null {
+		bottom: $bottom;
+	}
+	@if $left != null {
+		left: $left;
+	}
+	@if $right != null {
+		right: $right;
+	}
+	@if $width != null {
+		width: $width;
+	}
+	@if $height != null {
+		height: $height;
+	}
+	@if $top == 50% {
+		margin-top: -($height/2);
+	}
+	@if $bottom == 50% {
+		margin-bottom: -($height/2);
+	}
+	@if $left == 50% {
+		margin-left: -($width/2);
+	}
+	@if $right == 50% {
+		margin-right: -($width/2);
+	}
+	@if $bp != null {
+		background-position: $bp;
+	}
+}

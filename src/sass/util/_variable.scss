@@ -1,0 +1,22 @@
+$static:'..';
+$folder:'/';
+
+$minWidth:1100px;
+$imgWidth:2200px;
+
+$fontFamily:'Malgun Gothic', '맑은고딕', Dotum, '돋움', Hevetica, AppleGothic, sans-serif;
+$baseFontSize:12px;
+$indentValue:-999em;
+
+$fontColor:#5c79a2;
+$linkColor:#6096e3;
+$bodyColor:#000;
+
+$button:(
+	'.btn-link-home': (
+		'width':160,
+		'height':80,
+		'top':23,
+		'margin-left':-565
+	),
+);

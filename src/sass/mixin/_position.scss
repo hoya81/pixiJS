@@ -1,0 +1,35 @@
+@mixin position($position: absolute, $top: false, $left: false, $bottom: false, $right: false) {
+	position:$position;
+	
+	@if $top{
+		top:$top;
+	}
+	
+	@if $right{
+		right:$right;
+	}
+	
+	@if $bottom{
+		bottom:$bottom;
+	}
+	
+	@if $left{
+		left:$left;
+	}
+	
+	@if $top == 50%{
+		transform:translateY(-50%);
+	}
+	
+	@if $bottom == 50%{
+		transform:translateY(50%);
+	}
+	
+	@if $left == 50%{
+		transform:translateX(-50%);
+	}
+	
+	@if $right == 50%{
+		transform:translateX(50%);
+	}
+}

@@ -1,0 +1,26 @@
+// base
+@import "util/variable";
+@import "util/normalize.4.0.0";
+@import "mixin/mixin";
+@import "util/reset";
+@import "vendor/vendor";
+@import "module/module";
+
+// page css
+.flip-counter-con{
+    @include position-abs($width:1009px, $height:110px, $top:491px, $left:50%); 
+    margin-left:-487px;
+    overflow: hidden;
+}
+#counter{    
+    @include position-abs($width:1009px, $height:110px, $top:0, $left:0); 
+    @include bg($bg:'counter_bg.png', $position:0 0);
+   // transform: translateY(120px);
+    //position: absolute;
+    .flip{
+        margin-right:4px;
+        &[data-index="1"]{margin-right:58px;}
+        &[data-index="3"]{margin-right:58px;}
+        &[data-index="5"]{margin-right:58px;}
+    }
+}

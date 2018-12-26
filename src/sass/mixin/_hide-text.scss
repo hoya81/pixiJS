@@ -1,0 +1,6 @@
+@mixin hide-text{
+	text-align:left;
+	text-indent:-9999em;
+	white-space:nowrap;
+	overflow:hidden;
+}

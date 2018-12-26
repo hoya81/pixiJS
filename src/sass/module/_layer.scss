@@ -1,0 +1,18 @@
+.layer{
+	display:none;
+	position:relative;
+	overflow:hidden;
+	text-indent:$indentValue;
+	
+	.layerClose{
+		display:block;
+		overflow:hidden;
+		text-indent:$indentValue;
+		width:40px;
+		height:40px;
+		@include position($top:26px, $right:34px);
+	}
+}
+
+
+

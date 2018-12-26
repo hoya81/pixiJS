@@ -1,0 +1,22 @@
+$static:'/promo/aion/event/2018/';
+$folder:'181221_secret';
+
+$minWidth:320px;
+$imgWidth:100%;
+
+$fontFamily:'Malgun Gothic', '맑은고딕', Dotum, '돋움', Hevetica, AppleGothic, sans-serif;
+$baseFontSize:12px;
+$indentValue:-999em;
+
+$fontColor:#7c7c7c;
+$linkColor:#7c7c7c;
+$bodyColor:#fff;
+
+$button:(
+	'.btn-link-home': (
+		'width':160,
+		'height':80,
+		'top':23,
+		'margin-left':-565
+	),
+);

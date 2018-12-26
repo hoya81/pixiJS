@@ -1,0 +1,33 @@
+/**
+ * button position
+ */
+[class*="btn-link-"],
+[class*="btn-layer-"],
+[class*="btn-click-"]{
+	display:block; overflow:hidden;
+	text-indent:$indentValue;
+	position:absolute; left: 50%; z-index:10;
+	&.disable{
+		cursor: default;
+		background-position-x: 100%;
+	}
+}
+
+@each $selector, $value in $button{
+	#{$selector}{
+		@each $key, $size in $value{
+			@if $key == bg {
+				@include bg($bg: $size, $position: 0 0);
+			}
+			@else {
+				@if $size == auto{
+					#{$key}:$size;
+				}
+				@else{
+					#{$key}:$size + px;
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,21 @@
+@mixin set-area($width:false, $height:false, $indent:true, $position:relative, $bg:false) {
+	position:$position;
+	display:block;
+	overflow:hidden;
+	
+	@if $width{
+		width:unquote($width+'px');
+	}
+	
+	@if $height{
+		height:unquote($height+'px');
+	}
+	
+	@if $indent{
+		text-indent:$indentValue;
+	}
+	
+	@if $bg{
+		@include bg($bg:$bg);
+	}
+}

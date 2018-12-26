@@ -1,0 +1,73 @@
+.flip-counter{
+    .flip{
+        position: relative;
+        width:98px;
+        height:110px;
+        overflow: visible !important;
+        float:left;
+        @include hide-text();
+        
+        &>div{
+            position: absolute;
+            width:98px;
+            height:110px;
+            
+            perspective: 200px;
+            
+            &.back{
+
+            }
+            &.forward{
+
+            }
+
+            &>div{
+                position: absolute;
+            
+                &.up{
+                    top:0;
+                    width:98px;
+                    height:51px;
+                    @include bg($bg:'counter_number.png', $position:0 0);
+                    transform-origin: 50% 100%;
+                }
+                &.down{
+                    top:52px;
+                    width:100%;
+                    height:58px;
+                    @include bg($bg:'counter_number.png', $position:0 -52px);
+                    transform-origin: 50% 0;
+                }
+            }
+
+            &[data-num="1"]{>div{ background-position-x: -98px*1; }}
+            &[data-num="2"]{>div{ background-position-x: -98px*2; }}
+            &[data-num="3"]{>div{ background-position-x: -98px*3; }}
+            &[data-num="4"]{>div{ background-position-x: -98px*4; }}
+            &[data-num="5"]{>div{ background-position-x: -98px*5; }}
+            &[data-num="6"]{>div{ background-position-x: -98px*6; }}
+            &[data-num="7"]{>div{ background-position-x: -98px*7; }}
+            &[data-num="8"]{>div{ background-position-x: -98px*8; }}
+            &[data-num="9"]{>div{ background-position-x: -98px*9; }}
+
+        }  
+        
+        &:after{
+            display: block; 
+            position: absolute;
+            top:51px;
+            left:9px;
+            width:80px; 
+            height:1px; 
+            background:linear-gradient(90deg, #000, #9fa2a7,#000);
+            content:'';
+        }
+        &[data-index="0"], &[data-index="1"]{
+            &>div{
+                &>div{
+                    background-image:url($static + $folder +'/img/counter_number_brown.png') !important;
+                }
+            }
+        }
+    }
+}
